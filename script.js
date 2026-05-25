@@ -270,7 +270,8 @@ saveMealBtn.addEventListener("click", () => {
 
 
 // ===============================
-// GEMINI IA
+// ===============================
+// CHAT IA SIMPLE
 // ===============================
 
 sendQuestionBtn.addEventListener("click", async () => {
@@ -312,83 +313,76 @@ sendQuestionBtn.addEventListener("click", async () => {
 
         const response = await fetch(
 
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=TU_API_KEY",
+            "https://openrouter.ai/api/v1/chat/completions",
 
-        {
+            {
 
-            method:"POST",
+                method:"POST",
 
-            headers:{
-                "Content-Type":"application/json"
-            },
+                headers:{
 
-            body:JSON.stringify({
+                    "Authorization":
+                    "Bearer TU_API_KEY",
 
-                contents:[
+                    "Content-Type":
+                    "application/json"
 
-                    {
+                },
 
-                        parts:[
+                body:JSON.stringify({
 
-                            {
+                    model:"openai/gpt-3.5-turbo",
 
-                                text:
-                                `
-                                Eres un coach fitness profesional.
+                    messages:[
 
-                                Responde corto y útil.
+                        {
+                            role:"system",
 
-                                Usuario:
-                                ${question}
-                                `
+                            content:
+                            `
+                            Eres un coach fitness profesional.
 
-                            }
+                            Ayudas con:
+                            - nutrición
+                            - pérdida de grasa
+                            - ganancia muscular
+                            - hábitos saludables
 
-                        ]
+                            Responde corto y útil.
+                            `
+                        },
 
-                    }
+                        {
+                            role:"user",
+                            content:question
+                        }
 
-                ]
+                    ]
 
-            })
+                })
 
-        });
+            }
 
-
+        );
 
 
         const data =
         await response.json();
 
 
-        console.log(data);
+        const aiText =
+        data.choices[0]
+        .message.content;
 
 
-        // VALIDAR RESPUESTA
-
-        if(data.candidates){
-
-            const aiText =
-            data.candidates[0]
-            .content.parts[0]
-            .text;
-
-            aiDiv.innerText = aiText;
-
-        }else{
-
-            aiDiv.innerText =
-            "Gemini no respondió ❌";
-
-            console.log(data);
-
-        }
+        aiDiv.innerText =
+        aiText;
 
 
     }catch(error){
 
         aiDiv.innerText =
-        "Error conectando con Gemini ❌";
+        "Error conectando IA ❌";
 
         console.log(error);
 
@@ -401,20 +395,6 @@ sendQuestionBtn.addEventListener("click", async () => {
     chatBox.scrollHeight;
 
 });
-// ===============================
-// ENTER PARA ENVIAR
-// ===============================
-
-userQuestion.addEventListener("keypress", (e) => {
-
-    if(e.key === "Enter"){
-
-        sendQuestionBtn.click();
-
-    }
-
-});
-
 
 // ===============================
 // INICIAR
