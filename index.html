@@ -18,7 +18,9 @@
 
     <nav class="navbar">
 
-        <h1 class="logo">FitLife AI</h1>
+        <h1 class="logo">
+            FitLife AI
+        </h1>
 
         <div class="nav-buttons">
 
@@ -43,7 +45,7 @@
         </h2>
 
         <p>
-            Controla peso, calorías y comidas con inteligencia artificial.
+            Controla comidas, calorías y recibe consejos inteligentes.
         </p>
 
         <button id="startBtn">
@@ -56,11 +58,13 @@
 
     <section class="dashboard">
 
-        <!-- PESO -->
+        <!-- PROGRESO -->
 
         <div class="card">
 
-            <h3>🔥 Progreso</h3>
+            <h3>
+                🔥 Progreso
+            </h3>
 
             <div class="progress-container">
 
@@ -71,7 +75,7 @@
             <div class="weight-info">
 
                 <span id="currentWeight">
-                    0 kg
+                    92 kg
                 </span>
 
                 <span>
@@ -90,18 +94,20 @@
 
         <div class="card">
 
-            <h3>🍎 Calorías</h3>
+            <h3>
+                🍎 Calorías
+            </h3>
 
             <div class="big-number" id="caloriesValue">
-                0
+                1800
             </div>
 
             <p>
                 Consumidas hoy
             </p>
 
-            <button id="addCaloriesBtn">
-                Agregar Calorías
+            <button id="resetCaloriesBtn">
+                Reiniciar
             </button>
 
         </div>
@@ -110,14 +116,16 @@
 
         <div class="card">
 
-            <h3>💧 Agua</h3>
+            <h3>
+                💧 Agua
+            </h3>
 
             <div class="big-number" id="waterValue">
-                0L
+                2L
             </div>
 
             <p>
-                Agua consumida hoy
+                Consumo diario
             </p>
 
             <button id="addWaterBtn">
@@ -130,41 +138,42 @@
 
     <!-- COMIDAS -->
 
-<section class="meals-section">
+    <section class="meals-section">
 
-    <h2>
-        Registro de comidas
-    </h2>
+        <h2>
+            Registro de comidas
+        </h2>
 
-    <div class="meal-form">
+        <div class="meal-form">
 
-        <input
-            type="text"
-            id="mealInput"
-            placeholder="Ejemplo: pollo con arroz"
-        >
+            <input
+                type="text"
+                id="mealInput"
+                placeholder="Ejemplo: pollo con arroz"
+            >
 
-        <button id="saveMealBtn">
-            Guardar
-        </button>
+            <button id="saveMealBtn">
+                Guardar
+            </button>
 
-    </div>
+        </div>
 
-    <ul id="mealList"></ul>
+        <ul id="mealList"></ul>
 
-</section>
+    </section>
+
     <!-- IA -->
 
     <section class="ai-section">
 
         <h2>
-            🤖 Coach IA
+            🤖 Coach IA Gemini
         </h2>
 
         <div class="chat-box" id="chatBox">
 
             <div class="ai-message">
-                Hola 👋 Soy tu coach fitness.
+                Hola 👋 Soy tu coach fitness con IA.
             </div>
 
         </div>
@@ -194,7 +203,7 @@
         </h2>
 
         <p>
-            Proyecto fitness moderno con IA.
+            Proyecto fitness moderno con inteligencia artificial.
         </p>
 
     </footer>
