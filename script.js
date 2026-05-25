@@ -270,6 +270,15 @@ saveMealBtn.addEventListener("click", () => {
 
 
 // ===============================
+headers:{
+
+    "Authorization":
+    "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",
+
+    "Content-Type":
+    "application/json"
+
+},
 // ===============================
 // CHAT IA SIMPLE
 // ===============================
