@@ -204,33 +204,31 @@ function updateProgress(){
 
 // ===============================
 // AGREGAR AGUA
-<!-- AGUA -->
+// ===============================
+// ACTUALIZAR AGUA
+// ===============================
 
-<div class="card">
+updateWaterBtn.addEventListener("click", () => {
 
-    <h3>
-        💧 Agua
-    </h3>
+    const newWater =
+    waterInput.value;
 
-    <div class="big-number" id="waterValue">
-        2L
-    </div>
+    if(newWater === ""){
 
-    <p>
-        Consumo diario
-    </p>
+        alert("Ingresa una cantidad de agua");
 
-    <input
-        type="number"
-        id="waterInput"
-        placeholder="Ejemplo: 3"
-    >
+        return;
 
-    <button id="updateWaterBtn">
-        Actualizar Agua
-    </button>
+    }
 
-</div>
+    water = parseFloat(newWater);
+
+    waterValue.innerText =
+    water + "L";
+
+    waterInput.value = "";
+
+});
 // ===============================
 // REINICIAR CALORIAS
 // ===============================
