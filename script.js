@@ -1,72 +1,63 @@
-// BOTON EMPEZAR
+// VARIABLES
+    }
 
-const startBtn = document.querySelector(".start-btn");
 
-startBtn.addEventListener("click", () => {
+    // MENSAJE USUARIO
 
-    alert("Bienvenido a FitLife 🔥");
+    const userDiv = document.createElement("div");
+
+    userDiv.classList.add("user-message");
+
+    userDiv.innerText = question;
+
+    chatBox.appendChild(userDiv);
+
+
+    // RESPUESTA IA
+
+    const aiDiv = document.createElement("div");
+
+    aiDiv.classList.add("ai-message");
+
+    aiDiv.innerText = "Escribiendo...";
+
+    chatBox.appendChild(aiDiv);
+
+
+    // SCROLL
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+
+    setTimeout(() => {
+
+        const response = generateAIResponse(question);
+
+        aiDiv.innerText = response;
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+    }, 1000);
+
+
+    userQuestion.value = "";
 
 });
 
 
-// BOTON LOGIN
+// ENTER PARA ENVIAR
 
-const loginBtn = document.querySelector(".login-btn");
+userQuestion.addEventListener("keypress", (e) => {
 
-loginBtn.addEventListener("click", () => {
+    if(e.key === "Enter"){
 
-    alert("Pantalla de login próximamente");
-
-});
-
-
-// ANIMACION SIMPLE DE PROGRESO
-
-const progress = document.querySelector(".progress");
-
-let width = 0;
-
-const interval = setInterval(() => {
-
-    if(width >= 35){
-
-        clearInterval(interval);
-
-    } else {
-
-        width++;
-
-        progress.style.width = width + "%";
+        document.getElementById("sendQuestionBtn").click();
 
     }
 
-}, 20);
+});
 
 
-// DATOS SIMULADOS
+// INICIALIZAR
 
-const calories = 1840;
-
-console.log("Calorías consumidas:", calories);
-
-
-// EJEMPLO COACH IA SIMPLE
-
-function coachAdvice(){
-
-    const tips = [
-
-        "Bebe más agua 💧",
-        "Aumenta proteína 🍗",
-        "Duerme mejor 😴",
-        "Haz cardio 3 veces por semana 🏃",
-        "Reduce azúcar 🍭"
-
-    ];
-
-    const random = Math.floor(Math.random() * tips.length);
-
-    return tips[random];
-}
-
-console.log("Consejo IA:", coachAdvice());
+updateProgress();
