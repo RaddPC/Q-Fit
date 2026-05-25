@@ -20,7 +20,13 @@ const mealList = document.getElementById("mealList");
 const chatBox = document.getElementById("chatBox");
 const userQuestion = document.getElementById("userQuestion");
 
+const startBtn = document.getElementById("startBtn");
 
+startBtn.addEventListener("click", () => {
+
+    alert("Bienvenido a FitLife AI 🔥");
+
+});
 // LOGIN
 
 document.getElementById("loginBtn")
