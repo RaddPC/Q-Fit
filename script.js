@@ -35,6 +35,12 @@ document.getElementById("resetCaloriesBtn");
 const saveMealBtn =
 document.getElementById("saveMealBtn");
 
+const completeChallengeBtn =
+document.getElementById("completeChallengeBtn");
+
+const newChallengeBtn =
+document.getElementById("newChallengeBtn");
+
 const caloriesValue =
 document.getElementById("caloriesValue");
 
@@ -52,6 +58,12 @@ document.getElementById("mealInput");
 
 const mealList =
 document.getElementById("mealList");
+
+const challengeText =
+document.getElementById("challengeText");
+
+const challengeStatus =
+document.getElementById("challengeStatus");
 
 
 // ===============================
@@ -82,6 +94,26 @@ const foodsDatabase = {
     "arepa":200
 
 };
+
+
+// ===============================
+// RETOS FITNESS
+// ===============================
+
+const fitnessChallenges = [
+
+    "🔥 Camina 5.000 pasos hoy",
+    "💧 Toma 3 litros de agua",
+    "🥗 Come una comida saludable",
+    "🏋️ Haz 30 minutos de ejercicio",
+    "🚶 Camina después de almorzar",
+    "🍎 Evita comida chatarra hoy",
+    "😴 Duerme mínimo 8 horas",
+    "💪 Haz 20 flexiones",
+    "🚴 Haz cardio por 15 minutos",
+    "🧘 Relájate y reduce estrés"
+
+];
 
 
 // ===============================
@@ -268,8 +300,46 @@ saveMealBtn.addEventListener("click", () => {
 
 
 // ===============================
+// RETO FITNESS
+// ===============================
+
+function generateChallenge(){
+
+    const randomIndex =
+    Math.floor(
+        Math.random() *
+        fitnessChallenges.length
+    );
+
+    challengeText.innerText =
+    fitnessChallenges[randomIndex];
+
+    challengeStatus.innerText =
+    "Pendiente ❌";
+
+}
+
+
+completeChallengeBtn.addEventListener("click", () => {
+
+    challengeStatus.innerText =
+    "Completado ✅";
+
+});
+
+
+newChallengeBtn.addEventListener("click", () => {
+
+    generateChallenge();
+
+});
+
+
+// ===============================
 // INICIAR
 // ===============================
+
+generateChallenge();
 
 updateProgress();
 
