@@ -1,213 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lupak - Seguridad Digital</title>
-  <link rel="stylesheet" href="style.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitLife</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <header>
-    <a href="index.html">
-     <img src="img/logo1.svg" alt="Logo Lupak" class="logo">
-      </a>
-    <h1 class="titulo-3d">¿Que Sabes de Seguridad Digital?</h1>
-    <p class="subtitulo">Proyecto:Gonzalo Tobon/Multitech/Sistemas/P53</p>
-  </header>
 
-  <nav>
-    <button onclick="mostrarSeccion('fraudes')">🕵️ Tipos de Fraudes</button>
-    <button onclick="mostrarSeccion('prueba')">🧠 Ponte a Prueba</button>
-    <button onclick="mostrarSeccion('consejos')">💡 Consejos</button>
-    <button onclick="mostrarSeccion('videos')">🎥 Videos Educativos</button>
-  </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-  <main id="contenido">
-    <section id="inicio">
-      <p>🌐 Explora y aprende cómo protegerte de las estafas digitales. 🚫</p>
+        <h1 class="logo">FitLife</h1>
+
+        <button class="login-btn">
+            Iniciar Sesión
+        </button>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h2>
+            Tu progreso fitness en un solo lugar
+        </h2>
+
+        <p>
+            Controla calorías, peso, comidas y objetivos
+            de forma simple y moderna.
+        </p>
+
+        <button class="start-btn">
+            Empezar Ahora
+        </button>
+
     </section>
 
-   <section id="fraudes" class="oculto">
-  <h2>🕵️‍♂️ Tipos de Fraudes Digitales: Guía Completa de Identificación y Prevención</h2>
-  
-  <ul class="lista-fraudes-detallada">
-    
-    <li>
-      🎣 <b>Phishing (Suplantación de Identidad por Correo Electrónico o Web):</b>
-      <p>Es la técnica más antigua y extendida. Los atacantes envían correos electrónicos masivos, o incluso mensajes directos, que están diseñados para imitar perfectamente la identidad visual y el lenguaje de una **entidad legítima** (bancos, tiendas online, servicios de *streaming* o proveedores de correo electrónico). </p>
-      
-      <p>Su objetivo es generar **pánico o urgencia** para que la víctima haga clic en un enlace que la lleva a una página web falsa (clonada) donde, al introducir sus credenciales (usuario y contraseña), estas son **capturadas directamente por los criminales**.</p>
-      
-      <h4>🚨 Señales de Alerta:</h4>
-      <ul>
-        <li>**Solicitud Urgente:** Siempre te piden actuar de forma inmediata ("Tu cuenta será desactivada en 24 horas").</li>
-        <li>**Errores Gramaticales:** A menudo contienen fallos de ortografía o sintaxis, o usan un tono muy formal y genérico.</li>
-        <li>**Dirección de Enlace Sospechosa:** El URL al que te dirigen no es el sitio web oficial de la entidad (ej. termina en `.xyz` en lugar de `.com` o tiene letras cambiadas).</li>
-      </ul>
-    </li>
-    
-    
-<br>
-    <li>
-      📱 <b>Smishing (Suplantación de Identidad por SMS):</b>
-      <p>Es la versión móvil del Phishing. El atacante aprovecha la confianza que tenemos en los mensajes de texto cortos para engañarnos. Los mensajes suelen estar relacionados con **notificaciones de paquetería, sorteos ganados o supuestas alertas bancarias**.</p>
-      
-      <p>El mensaje incluye un **enlace acortado** (tipo `bit.ly` o similar) o un número de teléfono. Al hacer clic o llamar, el atacante puede intentar instalar *malware* en el teléfono o te guiará para que reveles información confidencial o financiera.</p>
-      
-      <h4>🛑 Cómo Evitarlo:</h4>
-      <ul>
-        <li>**Nunca Hagas Clic:** Evita hacer clic en enlaces de mensajes de texto que no esperabas, incluso si parecen provenir de una entidad conocida.</li>
-        <li>**Verifica la Fuente:** Si te preocupa un supuesto problema bancario o de paquetería, **llama tú mismo** al número oficial de la entidad que aparece en tu tarjeta o en su sitio web, no al número que te da el mensaje.</li>
-      </ul>
-    </li>
-    
+    <!-- CARDS -->
+    <section class="cards-container">
 
-    <br>
-    <li>
-      📞 <b>Vishing (Suplantación de Identidad por Llamada Telefónica):</b>
-      <p>Este fraude se basa puramente en la **Ingeniería Social**. El criminal te llama haciéndose pasar por un empleado de un servicio técnico o un agente de seguridad de tu banco, a menudo utilizando la técnica de *spoofing* para que aparezca un número legítimo en tu identificador de llamadas.</p>
-      
-      <p>El estafador tiene como objetivo principal conseguir que le digas tus claves, los códigos de verificación que llegan a tu móvil (OTP), o incluso que realices una transferencia de dinero urgente "para asegurar tu cuenta". Pueden usar una historia de miedo (un "cargo sospechoso") para manipular tus emociones.</p>
-      
-      <h4>🔑 Consejo de Prevención Fundamental:</h4>
-      <ul>
-        <li>**Regla de Oro:** Las entidades bancarias legítimas y serias **NUNCA** te solicitarán por teléfono que les proporciones tu contraseña, tu PIN de la tarjeta, el código de tres dígitos (CVV) ni los códigos de un solo uso (OTP) que recibes por SMS. Cuelga inmediatamente si te lo piden.</li>
-      </ul>
-    </li>
-   
-   <br> 
-    <li>
-      💬 <b>Fraudes en Redes Sociales y Aplicaciones de Mensajería:</b>
-      <p>Estos ataques son muy personales y a menudo explotan la confianza. Incluyen la **suplantación de un amigo o familiar** cuya cuenta fue robada, solicitándote dinero urgente por una emergencia. También son comunes las promociones falsas, sorteos de alta gama, o las ofertas que prometen grandes ganancias con poca inversión (esquemas Ponzi).</p>
-      
-      <p>El riesgo principal es el **robo de tu identidad** (para usar tu nombre en otros fraudes) o la **pérdida directa de dinero** al participar en una estafa que promete premios irreales o grandes descuentos.</p>
-      
-      <h4>🔎 Cómo Identificarlo:</h4>
-      <ul>
-        <li>**Comportamiento Anormal:** Si un familiar te pide dinero urgente por WhatsApp o Facebook y su lenguaje o tono es extraño, **llámalo** inmediatamente a su número de teléfono conocido para verificar.</li>
-        <li>**Ofertas Demasiado Buenas:** Si ves un producto de lujo o un premio que parece demasiado bueno para ser verdad, probablemente es una estafa. Revisa si la página tiene el sello azul de verificación o si la URL es el sitio oficial de la marca.</li>
-      </ul>
-    </li>
-    
-  </ul>
-</section>
+        <!-- META -->
+        <div class="card">
 
-    <section id="prueba" class="oculto">
-      <h2>🧠 Ponte a Prueba</h2>
-      <div id="pregunta-container">
-        <p id="pregunta"></p>
-        <div id="opciones"></div>
-      </div>
-      <p id="resultado"></p>
-      <div id="final"></div>
+            <h3>🔥 Perder grasa</h3>
+
+            <div class="progress-bar">
+
+                <div class="progress"></div>
+
+            </div>
+
+            <div class="weights">
+
+                <span>92 kg</span>
+                <span>75 kg</span>
+
+            </div>
+
+        </div>
+
+        <!-- CALORIAS -->
+        <div class="card">
+
+            <h3>🍎 Calorías</h3>
+
+            <div class="calories">
+
+                1840
+
+            </div>
+
+            <p>Consumidas hoy</p>
+
+        </div>
+
+        <!-- COACH -->
+        <div class="card">
+
+            <h3>🤖 Coach IA</h3>
+
+            <div class="message user">
+                ¿Cómo puedo bajar grasa?
+            </div>
+
+            <div class="message ai">
+                Mantén un déficit calórico y aumenta proteína.
+            </div>
+
+        </div>
+
     </section>
 
-<section id="consejos" class="seccion-consejos" aria-labelledby="titulo-consejos" role="region">
-  <h2 id="titulo-consejos" class="titulo-seccion">💡 5 Pilares de la Autoprotección Digital para Todos</h2>
-  
-  <ul class="lista-consejos-detallados">
-    
-    <li>
-      🔑 <b>Contraseñas Fuertes y Únicas: El Muro de tu Identidad</b>
-      <p>La contraseña es la primera y más importante línea de defensa. Nunca uses la misma clave para varias cuentas (si una cae, caen todas). Una contraseña segura debe ser <strong>larga</strong> (mínimo 12 caracteres) y debe combinar mayúsculas, minúsculas, números y símbolos. </p>
-      
-      <h4>✅ Acción Recomendada:</h4>
-      <p>Utiliza un **Gestor de Contraseñas** (*Password Manager*) como 1Password, Bitwarden o Google Password Manager. Estos no solo guardan tus claves de forma segura, sino que también generan contraseñas complejas y únicas automáticamente.</p>
-    </li>
-    
-    <li>
-      🧩 <b>Activa la Verificación en Dos Pasos (2FA o MFA): El Candado Extra</b>
-      <p>La autenticación de dos factores añade una **capa de seguridad crítica**. Incluso si un atacante roba tu contraseña, necesitará un **segundo elemento** que solo tú posees (un código temporal enviado a tu móvil o generado por una aplicación).</p>
-      
-      <h4>✅ Acción Recomendada:</h4>
-      <p>Siempre que la plataforma lo ofrezca (Gmail, bancos, redes sociales), activa el 2FA. Es preferible usar aplicaciones dedicadas (como Google Authenticator o Authy) en lugar de depender únicamente del SMS, ya que este último es vulnerable al *SIM Swapping*.</p>
-    </li>
-    
-    <li>
-      🚫 <b>Nunca Compartas tus Claves, Códigos ni Información Sensible</b>
-      <p>Tu información de acceso, códigos de un solo uso (OTP), o números de identificación son estrictamente personales. Ninguna entidad legítima, ni tu banco, ni los servicios técnicos, te pedirá jamás tu contraseña completa o el código de verificación que acabas de recibir por teléfono.</p>
-      
-      <h4>✅ Acción Recomendada:</h4>
-      <p>Mantente escéptico ante cualquier solicitud de datos por correo electrónico, llamada o mensaje. Si alguien pide tu PIN, la respuesta siempre debe ser **NO**. Si recibes un código OTP que no solicitaste, ignóralo; es probable que un atacante esté intentando entrar a tu cuenta.</p>
-    </li>
-    
-    <li>
-      🔍 <b>Verifica Enlaces y Direcciones Web Antes de Abrir</b>
-      <p>Antes de hacer clic en un enlace de un correo o mensaje, especialmente si es inesperado o urgente, **pasa el cursor del ratón** por encima para ver la dirección real que aparece en la parte inferior de tu navegador. Comprueba que la URL del sitio web comience con **<code>https://</code>** y tenga un icono de candado cerrado en la barra de direcciones.</p>
-      
-      <h4>✅ Acción Recomendada:</h4>
-      <p>Si recibes un mensaje sobre tu cuenta bancaria, **no uses el enlace proporcionado**. En su lugar, abre una nueva ventana en tu navegador y escribe la dirección oficial del banco tú mismo para acceder. Así garantizas estar en el sitio correcto.</p>
-    </li>
-    
-    <li>
-      🛡️ <b>Mantén Todo Actualizado: Software, Aplicaciones y Antivirus</b>
-      <p>Las actualizaciones de *software* no solo añaden nuevas funcionalidades; la mayoría de las veces, incluyen **parches de seguridad** críticos que corrigen vulnerabilidades recién descubiertas. Los atacantes buscan explotar estos "agujeros" en sistemas desactualizados.</p>
-      
-      <h4>✅ Acción Recomendada:</h4>
-      <p>Configura tu sistema operativo (Windows, macOS), tu navegador y tus aplicaciones móviles para que se **actualicen de forma automática**. Un antivirus o solución de seguridad debe estar siempre activo y con sus bases de datos actualizadas para detectar las últimas amenazas.</p>
-    </li>
-    
-  </ul>
-</section>
+    <!-- COMIDAS -->
+    <section class="meals">
 
-    <!-- 🎥 Nueva Sección de Videos Educativos -->
-    <section id="videos" class="oculto">
-      <h2>🎥 Aprende Más Sobre Seguridad Digital</h2>
-      <p>Selecciona un tema para ver un video educativo con consejos útiles y prácticos:</p>
+        <h2>Registro de comidas</h2>
 
-      <div class="contenedor-videos">
-        <div class="video-card">
-          <h3>🔒 ¿Qué es la Seguridad Digital?</h3>
-          <a href="https://www.youtube.com/watch?v=bN7r167crdM" target="_blank" class="btn-vermas">🎬 Ver Video en YouTube</a>
-          <p>Conoce los fundamentos de la seguridad digital y por qué es esencial proteger tus datos en el mundo actual. 🌍</p>
-          <a href="https://www.signaturit.com/es/blog/que-es-seguridad-digital/" target="_blank" class="btn-vermas">Ver más 🔗</a>
+        <div class="meal-grid">
+
+            <div class="meal-card">
+
+                <h3>🥗 Desayuno</h3>
+
+                <ul>
+
+                    <li>Huevos</li>
+                    <li>Avena</li>
+                    <li>Café</li>
+
+                </ul>
+
+            </div>
+
+            <div class="meal-card upload">
+
+                <h3>📸 Subir comida</h3>
+
+                <div class="upload-box">
+
+                    Tomar foto
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="video-card">
-          <h3>🎣 Cómo Identificar un Phishing</h3>
-          <a href="https://www.youtube.com/watch?v=hrgPg4Y_a3c" target="_blank" class="btn-vermas">🎬 Ver Video en YouTube</a>
-          <p>Aprende a detectar correos falsos o enlaces sospechosos y evita caer en trampas digitales. 📧</p>
-          <a href="https://www.mcafee.com/blogs/es-es/internet-security/ejemplos-de-phishing-como-detectar-un-correo-de-phishing/" target="_blank" class="btn-vermas">Ver más 🔗</a>
-        </div>
-
-        <div class="video-card">
-          <h3>🔐 Consejos para Contraseñas Seguras</h3>
-            <a href="https://www.youtube.com/watch?v=jSMAN5mVn00" target="_blank" class="btn-vermas">🎬 Ver Video en YouTube</a>
-          <p>Descubre cómo crear contraseñas fuertes y seguras que mantengan tu información protegida. 🔑</p>
-          <a href="https://www.avast.com/es-es/c-strong-password-ideas" target="_blank" class="btn-vermas">Ver más 🔗</a>
-        </div>
-
-        <div class="video-card">
-          <h3>📱 Cómo proteger tus redes sociales</h3>
-            <a href="https://www.youtube.com/watch?v=gFuTGQUPfdE" target="_blank" class="btn-vermas">🎬 Ver Video en YouTube</a>
-          <p>Evita la suplantación de identidad y aprende a configurar la privacidad de tus cuentas. 🔒</p>
-          <a href="https://www.mcafee.com/blogs/es-mx/tips-tricks/10-consejos-para-protegerse-en-las-redes-sociales/" target="_blank" class="btn-vermas">Ver más 🔗</a>
-        </div>
-      </div>
     </section>
-  </main>
 
-<footer class="pie-de-pagina" role="contentinfo">
-  <div class="contenedor-footer">
-    
-    <div class="footer-columna mision-contacto">
-      <h3>Acerca de Lupak</h3>
-      <p class="mision-lupak">
-        Lupak es una plataforma sin ánimo de lucro, dedicada a Educar a la Comunidad sobre Seguridad Digital y Ciberprotección. ¡Infórmate y Protégete!
-      </p>
-      <p><strong>Email:</strong> raddpc10soporte@gmail.com</p>
-    </div>
+    <!-- ESTADISTICAS -->
+    <section class="stats">
 
-    
+        <h2>Estadísticas</h2>
 
-    
+        <div class="stats-grid">
 
-  <div class="footer-copyright">
-    <p>&copy; 2025 Lupak 
-    Proyecto Academico de Seguridad Digital. Todos los derechos reservados.</p>
-  </div>
-</footer>
+            <div class="stat-item">
 
-  <script src="script.js"></script>
+                <h3>12</h3>
+                <p>Kg Perdidos</p>
+
+            </div>
+
+            <div class="stat-item">
+
+                <h3>45</h3>
+                <p>Días Activo</p>
+
+            </div>
+
+            <div class="stat-item">
+
+                <h3>87%</h3>
+                <p>Objetivo</p>
+
+            </div>
+
+            <div class="stat-item">
+
+                <h3>2100</h3>
+                <p>Meta Calórica</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>FitLife</h2>
+
+        <p>
+            Plataforma fitness moderna y sencilla.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
