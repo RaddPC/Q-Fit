@@ -201,18 +201,33 @@ function updateProgress(){
 
 // ===============================
 // AGREGAR AGUA
-// ===============================
+<!-- AGUA -->
 
-addWaterBtn.addEventListener("click", () => {
+<div class="card">
 
-    water++;
+    <h3>
+        💧 Agua
+    </h3>
 
-    waterValue.innerText =
-    water + "L";
+    <div class="big-number" id="waterValue">
+        2L
+    </div>
 
-});
+    <p>
+        Consumo diario
+    </p>
 
+    <input
+        type="number"
+        id="waterInput"
+        placeholder="Ejemplo: 3"
+    >
 
+    <button id="updateWaterBtn">
+        Actualizar Agua
+    </button>
+
+</div>
 // ===============================
 // REINICIAR CALORIAS
 // ===============================
