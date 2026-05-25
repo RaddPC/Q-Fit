@@ -275,4 +275,71 @@ footer{
         flex-direction:column;
     }
 
+    /* RETO FITNESS */
+
+.challenge-section{
+
+    width:90%;
+    margin:auto;
+    margin-bottom:60px;
+
+}
+
+.challenge-section h2{
+
+    font-size:40px;
+    margin-bottom:25px;
+
+}
+
+.challenge-card{
+
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    text-align:center;
+
+}
+
+body.dark .challenge-card{
+
+    background:#1f2937;
+
+}
+
+.challenge-card h3{
+
+    font-size:30px;
+    margin-bottom:20px;
+
+}
+
+.challenge-card p{
+
+    font-size:22px;
+    margin-bottom:25px;
+
+}
+
+.challenge-buttons{
+
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+
+}
+
+.challenge-buttons button{
+
+    padding:15px 25px;
+    border:none;
+    border-radius:15px;
+    background:#facc15;
+    cursor:pointer;
+    font-weight:bold;
+
+}
+
 }
