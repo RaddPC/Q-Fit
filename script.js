@@ -4,7 +4,6 @@
 
 let calories = 1800;
 let water = 2;
-
 let currentWeight = 92;
 
 const initialWeight = 92;
@@ -36,9 +35,6 @@ document.getElementById("resetCaloriesBtn");
 const saveMealBtn =
 document.getElementById("saveMealBtn");
 
-const sendQuestionBtn =
-document.getElementById("sendQuestionBtn");
-
 const caloriesValue =
 document.getElementById("caloriesValue");
 
@@ -57,15 +53,9 @@ document.getElementById("mealInput");
 const mealList =
 document.getElementById("mealList");
 
-const userQuestion =
-document.getElementById("userQuestion");
-
-const chatBox =
-document.getElementById("chatBox");
-
 
 // ===============================
-// BANCO DE COMIDAS
+// BASE DE DATOS DE COMIDAS
 // ===============================
 
 const foodsDatabase = {
@@ -84,7 +74,12 @@ const foodsDatabase = {
     "banana":100,
     "manzana":90,
     "cafe":20,
-    "ensalada":100
+    "ensalada":100,
+    "salmon":350,
+    "yogurt":120,
+    "queso":200,
+    "frijoles":180,
+    "arepa":200
 
 };
 
@@ -264,136 +259,13 @@ saveMealBtn.addEventListener("click", () => {
 
     mealList.appendChild(li);
 
+
+    // LIMPIAR INPUT
+
     mealInput.value = "";
 
 });
 
-
-
-// CHAT IA SIMPLE
-// ===============================
-
-sendQuestionBtn.addEventListener("click", async () => {
-
-    const question =
-    userQuestion.value;
-
-    if(question === "") return;
-
-
-    // MENSAJE USUARIO
-
-    const userDiv =
-    document.createElement("div");
-
-    userDiv.classList.add("user-message");
-
-    userDiv.innerText = question;
-
-    chatBox.appendChild(userDiv);
-
-
-    // MENSAJE IA
-
-    const aiDiv =
-    document.createElement("div");
-
-    aiDiv.classList.add("ai-message");
-
-    aiDiv.innerText = "Pensando...";
-
-    chatBox.appendChild(aiDiv);
-
-    chatBox.scrollTop =
-    chatBox.scrollHeight;
-
-
-    try{
-
-        const response = await fetch(
-
-            "https://openrouter.ai/api/v1/chat/completions",
-
-            {
-
-                method:"POST",
-
-                headers:{
-
-                    "Authorization":
-                    "Bearer TU_API_KEY",
-
-                    "Content-Type":
-                    "application/json"
-
-                },
-
-                body:JSON.stringify({
-
-                    model:"openai/gpt-3.5-turbo",
-
-                    messages:[
-
-                        {
-                            role:"system",
-
-                            content:
-                            `
-                            Eres un coach fitness profesional.
-
-                            Ayudas con:
-                            - nutrición
-                            - pérdida de grasa
-                            - ganancia muscular
-                            - hábitos saludables
-
-                            Responde corto y útil.
-                            `
-                        },
-
-                        {
-                            role:"user",
-                            content:question
-                        }
-
-                    ]
-
-                })
-
-            }
-
-        );
-
-
-        const data =
-        await response.json();
-
-
-        const aiText =
-        data.choices[0]
-        .message.content;
-
-
-        aiDiv.innerText =
-        aiText;
-
-
-    }catch(error){
-
-        aiDiv.innerText =
-        "Error conectando IA ❌";
-
-        console.log(error);
-
-    }
-
-
-    userQuestion.value = "";
-
-    chatBox.scrollTop =
-    chatBox.scrollHeight;
-
-});
 
 // ===============================
 // INICIAR
