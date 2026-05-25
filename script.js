@@ -312,7 +312,7 @@ sendQuestionBtn.addEventListener("click", async () => {
 
         const response = await fetch(
 
-        "https://gemini.google.com/app?hl=es",
+        "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=TU_API_KEY",
 
         {
 
