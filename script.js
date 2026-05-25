@@ -310,10 +310,9 @@ sendQuestionBtn.addEventListener("click", async () => {
 
     try{
 
-        const response =
-        await fetch(
+        const response = await fetch(
 
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=TU_API_KEY",
+        "https://gemini.google.com/app?hl=es",
 
         {
 
@@ -337,8 +336,7 @@ sendQuestionBtn.addEventListener("click", async () => {
                                 `
                                 Eres un coach fitness profesional.
 
-                                Responde corto,
-                                claro y útil.
+                                Responde corto y útil.
 
                                 Usuario:
                                 ${question}
@@ -354,23 +352,37 @@ sendQuestionBtn.addEventListener("click", async () => {
 
             })
 
-        }
+        });
 
-        );
+
 
 
         const data =
         await response.json();
 
 
-        const aiText =
-        data.candidates[0]
-        .content.parts[0]
-        .text;
+        console.log(data);
 
 
-        aiDiv.innerText =
-        aiText;
+        // VALIDAR RESPUESTA
+
+        if(data.candidates){
+
+            const aiText =
+            data.candidates[0]
+            .content.parts[0]
+            .text;
+
+            aiDiv.innerText = aiText;
+
+        }else{
+
+            aiDiv.innerText =
+            "Gemini no respondió ❌";
+
+            console.log(data);
+
+        }
 
 
     }catch(error){
@@ -389,8 +401,6 @@ sendQuestionBtn.addEventListener("click", async () => {
     chatBox.scrollHeight;
 
 });
-
-
 // ===============================
 // ENTER PARA ENVIAR
 // ===============================
