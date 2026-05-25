@@ -26,8 +26,11 @@ document.getElementById("darkModeBtn");
 const updateWeightBtn =
 document.getElementById("updateWeightBtn");
 
-const addWaterBtn =
-document.getElementById("addWaterBtn");
+const updateWaterBtn =
+document.getElementById("updateWaterBtn");
+
+const waterInput =
+document.getElementById("waterInput");
 
 const resetCaloriesBtn =
 document.getElementById("resetCaloriesBtn");
