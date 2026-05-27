@@ -318,4 +318,4 @@ updateProgress();
 
 updateWaterVisual();
 
-console.log("🔥 FitLife AI Premium cargado");
+console.log("🔥 Q?Fit Premium cargado");
